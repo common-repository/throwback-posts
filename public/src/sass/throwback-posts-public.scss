@@ -1,0 +1,117 @@
+#throwback-posts{
+    position: fixed;
+	right: 50px;
+	max-width: 400px;
+	width: 90%;
+    background: white;
+	box-shadow: -2px -1px 22px 0px #d4d4d4;
+	top: calc( 100% - 60px );
+	transition: all 400ms;
+	max-height: 100%;
+	z-index: 9999999;
+	@media only screen and (max-width: 978px) {
+		width: 134px;
+		right: 0;
+		.throwback-posts__texting{
+			display: none;
+		}
+	}
+	&.on{
+		width:100%;
+		.throwback-posts__arrow{
+			//transform: inherit;
+			border: 0;
+		
+			&:before, &:after {
+				position: absolute;
+				left: 15px;
+				content: ' ';
+				height: 20px;
+				width: 2px;
+				background-color: white;
+			}
+			&:before {
+				transform: rotate(0);
+			}
+			&:after {
+				transform: rotate(90deg);
+			}
+		}
+	}
+}
+.throwback-posts{
+	&__card{
+		padding: 10px;
+		width: 90%;
+		margin: 10px auto;
+		position: relative;
+		z-index: 9;
+		a{
+			color: #252525 !important;
+		}
+	}
+	&__title{
+		font-size: 1.9rem;	
+	}
+	&__bg{
+		background-size: cover;
+		background-position: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		opacity: 0.3;
+	    z-index: -1;
+	}
+	&__header{
+		cursor: pointer;
+		display: flex;
+		background: orange;
+		color: white;
+		height: 60px;
+		padding: 10px 30px;
+		position: relative;
+	}
+	&__maintitle{
+		font-size:22px;
+		margin:0;
+	}
+	&__container{
+		background: white;
+	}
+	&__subtitle{
+		font-size: 16px;
+		margin: 0;
+		line-height: 10px;
+	}
+	&__icon{
+		max-width: 40px;
+		margin-right: 20px;
+	}
+	&__excerpt{
+		font-size: 13px;
+	    letter-spacing: 0.2px;
+	}
+	&__datetime{
+		position: relative;
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		font-size: 14px;
+		font-weight: 600;
+	}
+	&__arrow{
+		border: solid #fff;
+		border-width: 0 2px 2px 0;
+		display: flex;
+		padding: 3px;
+		transform: rotate(-135deg);
+		width: 14px;
+		height: 14px;
+		position: absolute;
+		right: 30px;
+		top: 50%;
+		cursor: pointer;
+		  
+	}
+
+}
